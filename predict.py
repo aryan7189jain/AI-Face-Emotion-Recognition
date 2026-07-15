@@ -2,7 +2,12 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 # Load model once
-model = load_model("best_emotion_model.keras")
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "models", "best_emotion_model.keras")
+
+model = load_model(MODEL_PATH)
 
 emotion_labels = [
     "Angry",

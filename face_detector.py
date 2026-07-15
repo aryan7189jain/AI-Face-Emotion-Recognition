@@ -3,10 +3,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-MODEL_PATH = os.path.join(
-    BASE_DIR,
-    "face_detection_yunet_2023mar.onnx"
-)
+MODEL_PATH = os.path.join(BASE_DIR, "models", "face_detection_yunet_2023mar.onnx")
 
 face_detector = cv2.FaceDetectorYN.create(
     MODEL_PATH,
